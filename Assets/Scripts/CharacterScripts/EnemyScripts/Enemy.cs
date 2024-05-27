@@ -21,8 +21,6 @@ public abstract class Enemy : Character
     public GameObject target;
 
 
-    
-     
 
 
     public float DistanceFromTarget()

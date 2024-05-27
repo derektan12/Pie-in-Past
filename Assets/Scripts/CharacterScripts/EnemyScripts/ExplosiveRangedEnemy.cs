@@ -17,6 +17,8 @@ public class ExplosiveRangedEnemy : RangedEnemy
         AcquireTarget();
         originalMaterial = spRend.material;
         attackDamage = 40;
+        maxHP = 100;
+        health = maxHP;
     }
 
     private void Update()

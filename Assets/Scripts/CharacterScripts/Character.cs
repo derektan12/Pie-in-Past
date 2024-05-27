@@ -6,6 +6,7 @@ public abstract class Character : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float maxHealth = 100;
+    public int maxHP;
     public float health;
     [SerializeField] private Material flashMaterial;
 
@@ -27,6 +28,7 @@ public abstract class Character : MonoBehaviour
     void Start()
     {
         originalMaterial = spRend.material;
+        
     }
 
     

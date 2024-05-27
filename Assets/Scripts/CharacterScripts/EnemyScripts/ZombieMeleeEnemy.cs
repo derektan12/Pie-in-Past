@@ -8,6 +8,8 @@ public class ZombieMeleeEnemie : MeleeEnemy
     {
         AcquireTarget();
         originalMaterial = spRend.material;
+        maxHP = 100;
+        health = maxHP;
     }
 
     // Update is called once per frame

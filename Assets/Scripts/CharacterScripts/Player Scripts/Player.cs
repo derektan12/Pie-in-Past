@@ -10,7 +10,7 @@ public class Player : Character
 {
     private int level = 1;
     private int xp = 0;
-    public int maxHP;
+    //public int maxHP;
     public GameObject xpBar;
     private Canvas levelUp;
 
@@ -23,8 +23,10 @@ public class Player : Character
     // Start is called before the first frame update
     void Start()
     {
-        health = 100;
+        
         maxHP = 100;
+        health = maxHP;
+
         moveSpeed = 10f;
         invDur = 0.5f;
         invTimer = invDur;
@@ -64,7 +66,7 @@ public class Player : Character
     {
         if (invTimer >= invDur)
         {
-            //health -= damage;
+            health -= damage;
             invTimer = 0;
         }
         if(health <= 0)
@@ -76,10 +78,7 @@ public class Player : Character
         GameObject hpBar = GameObject.Find("HP Holder");
         hpBar.GetComponent<HPBar>().Change(this);
     }
-    public void TimeStop()
-    {
-
-    }
+    
     public void GainXP(int newXP)
     {
         xp += newXP;
